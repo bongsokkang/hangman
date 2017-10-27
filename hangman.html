@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <div class="underscores">fdsafds</div>
+    <div class="rightGuess">fdsafdsa</div>
+    <div class="wrongGuess">fdsafdsa</div>
+</body>
+
+
+<script>    
+        var word = ['Naruto', 'Sasuke', 'Sakura'];
+        
+        var randomNum = Math.floor(Math.random()* word.length);
+        var choosenWord = word[randomNum];
+        var underScore = [];
+     console.log(choosenWord);
+        
+        var underscore = document.getElementsByClassName('underScore');
+        
+        function generateUnderscore (){
+            for (i=0; i <chosenWord.length; i++) {
+                underScore.push('_');
+            }
+            return underScore;
+        }
+        console.log(generateUnderscore());
+
+        document.addEventListener('keypress', (event) => {
+                var keyword = STrong.fromCharCode(event.keyCode);
+        
+                if(choosenWord.indexOf(keyword) > -1) {
+                    rightWord.push(keyword);
+                    underScore[choosenWord.indexOf(keyword)]=keyword;
+                    if(underScore.join('') == choosenWord) {
+                        alert('You Win');
+        
+                    }
+                }
+                else {wrongWord.push(keyword);
+                }
+        });
+        generateUnderscore();
+        </script>
+</html>
